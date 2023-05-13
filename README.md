@@ -1,27 +1,34 @@
-Hello, this is jayachandra. I can help you create a tutorial on dapp development of train ticket booking app in celo blockchain. Here is the first page of the tutorial:
+# Train Ticket Booking
+Hello, My name is Jayachandra and I'm offering my assistance to help you develop a tutorial on creating a DApp for train ticket booking on the Celo blockchain.
 
-# Introduction
+## Introduction
 
-In this tutorial, you will learn how to build a decentralized application (dapp) for booking train tickets on the celo blockchain. You will use Solidity to write smart contracts that handle the logic and data of the dapp, and React to create a user interface that interacts with the celo network. You will also use hardhat as a development framework and toolchain for compiling, testing, and deploying your smart contracts.
+Blockchain technology has brought about many changes in various industries, including the transportation industry. With the introduction of decentralized applications (DApps), it is now possible to build a transparent and secure system for booking train tickets. In this tutorial, we will be exploring how to create a DApp for booking train tickets on the Celo blockchain.  Let's dive in!
 
-## What is a dapp?
+## Table of Contents
 
-A dapp is a software application operating on a decentralized network like a blockchain. These applications are designed to be trustless, transparent, and secure, as they do not rely on a central authority for their operation. These apps use distributed ledgers and offer immutability in data storage and management⁴.
+- [Train Ticket Booking](#Train-Ticket-Booking)
+  - [Introduction](#introduction)
+  - [Table of Contents](#table-of-contents)
+  - [Objective](#Objective)
+  - [Prerequisites](#Prerequisites)
+  - [What is a dapp?](#What-is-a-dapp)
+  - [What is celo](#What-is-celo)
+    - [What is a train ticket booking dapp?](#What-is-a-train-ticket-booking-dapp)
+  - [Tutorial](#tutorial)
+    - [Setting up the development environment](#Setting-up-the-development-environment)
+    - [Writing the smart contract](#Writing-the-smart-contract)
+      - [The TrainTicket contract](#The-TrainTicket-contract)
+    - [Testing the smart contract](#Testing-the-smart-contract)
+    - [Running and deploying the smart contract](#Running-and-deploying-the-smart-contract)
+    - [Creating the user interface](#Creating-the-user-interface)
+      - [Setting up the frontend](#Setting-up-the-frontend)
+    - [Finishing the user interface](#Finishing-the-user-interface)
+      - [Styling the app](#Styling-the-app)
+    - [Conclusion](#conclusion)
 
-## What is celo?
-
-Celo is an open-source blockchain platform focused on making decentralized financial tools accessible to anyone with a mobile phone. It offers a unique opportunity for developers to build and deploy dapps that have the potential to reach a wide audience¹. Celo has two native tokens: CELO, which is used for governance and staking, and cUSD, which is a stablecoin pegged to the US dollar.
-
-## What is a train ticket booking dapp?
-
-A train ticket booking dapp is an application that allows users to buy and sell train tickets on the celo blockchain. The dapp will have the following features:
-
-- Users can create an account with their phone number and celo wallet address.
-- Users can browse available train routes and prices.
-- Users can book a ticket by paying with cUSD or CELO tokens.
-- Users can cancel their booking and get a refund (minus a cancellation fee) before the departure time.
-- Users can resell their tickets to other users at a market price.
-- Users can rate their experience and leave feedback for the train service.
+## Objective
+The objective of this tutorial is to teach you how to develop a decentralized application (DApp) for booking train tickets on the Celo blockchain. This tutorial will guide you through the process of setting up the development environment, writing and testing the smart contract, creating the user interface, and styling the app using various technologies such as Javascript, Typescript, React, Tailwind CSS, Hardhat, and Solidity.
 
 ## Prerequisites
 
@@ -34,13 +41,37 @@ Before diving into building the dapp, you will need to have some level of knowle
 - Hardhat
 - Solidity
 
-You will also need a few tools:
+
+## Requirements
 
 - Celo wallet: This is the official wallet for the celo platform, which you will need to test your dapp on the celo testnet.
-- Remix IDE: This is a web-based Integrated Development Environment (IDE) for writing, testing, and debugging smart contracts.
 - Truffle Suite: This is a popular development framework for Ethereum and Celo that provides a suite of tools for building and deploying smart contracts.
+- A text editor: For this tutorial, we will make use of Visual Studio Code, so ensure you have VS Code setup on your PC: VSCode is a popular integrated development environment (IDE) for building software.
+- You will need to have node.js installed on your system, with version V10. or higher.
 
-## Setting up the development environment
+
+## What is a dapp?
+
+A dapp is a software application operating on a decentralized network like a blockchain. These applications are designed to be trustless, transparent, and secure, as they do not rely on a central authority for their operation. These apps use distributed ledgers and offer immutability in data storage and management⁴.
+
+## What is celo?
+
+Celo is an open-source blockchain platform focused on making decentralized financial tools accessible to anyone with a mobile phone. It offers a unique opportunity for developers to build and deploy dapps that have the potential to reach a wide audience¹. Celo has two native tokens: CELO, which is used for governance and staking, and cUSD, which is a stablecoin pegged to the US dollar.
+
+### What is a train ticket booking dapp?
+
+A train ticket booking dapp is an application that allows users to buy and sell train tickets on the celo blockchain. The dapp will have the following features:
+
+- Users can create an account with their phone number and celo wallet address.
+- Users can browse available train routes and prices.
+- Users can book a ticket by paying with cUSD or CELO tokens.
+- Users can cancel their booking and get a refund (minus a cancellation fee) before the departure time.
+- Users can resell their tickets to other users at a market price.
+- Users can rate their experience and leave feedback for the train service.
+
+
+## Tutorial
+### Setting up the development environment
 
 To set up the development environment, you will need to do the following steps:
 
@@ -103,15 +134,12 @@ This will create a basic react app structure with some sample files.
 That's it! You have successfully set up the development environment for your train ticket booking dapp. 
 
 
-
-
-
  
-# Writing the smart contracts
+## Writing the smart contract
 
 In this page, we will write the smart contracts for the train ticket booking dapp. We will use Solidity as the programming language and Remix IDE as the development tool. We will also use hardhat for testing and deploying our contracts.
 
-## The TrainTicket contract
+### The TrainTicket contract
 
 The TrainTicket contract is the main contract that handles the logic and data of the dapp. It has the following features:
 
@@ -294,11 +322,11 @@ contract TrainTicket {
 That's it! You have successfully written the TrainTicket contract for your dapp. In the next step we will test and deploy this contract using hardhat. Stay tuned! 😊
 
 
-# Testing and deploying the smart contracts
+## Testing the smart contract
 
 In this page, we will test and deploy the TrainTicket contract using hardhat. We will use hardhat's built-in testing framework and network to write and run unit tests for our contract. We will also use truffle's migration scripts to deploy our contract to the celo testnet.
 
-## Writing unit tests
+### Writing unit tests
 
 Unit tests are a way of verifying that our contract works as expected and does not have any bugs or errors. They are written in Javascript and use a library called chai to make assertions about the contract state and events.
 
@@ -573,11 +601,11 @@ describe("TrainTicket", function () {
 That's it! You have successfully written unit tests for your TrainTicket contract. In the next step, we will run these tests and deploy our contract to the celo testnet. Stay tuned! 😊
 
 
-# Running and deploying the smart contracts
+## Running and deploying the smart contract
 
 In this page, we will run and deploy our TrainTicket contract using hardhat. We will use hardhat's built-in network and node to run our tests locally. We will also use truffle's migration scripts and hardhat's deploy plugin to deploy our contract to the celo testnet.
 
-## Running the tests
+### Running the tests
 
 To run our tests, we will use hardhat's `test` command, which will automatically compile our contract and run our test file using mocha and waffle. To run our tests, we will open a new terminal window in our hardhat project folder and type this command:
 
@@ -602,7 +630,7 @@ This will output something like this:
 
 This means that all our tests have passed and our contract works as expected. If any of our tests fail, we can debug them using hardhat's console.log function or Remix IDE's debugger.
 
-## Deploying the contract
+### Deploying the contract
 
 To deploy our contract to the celo testnet, we will use truffle's migration scripts and hardhat's deploy plugin. Truffle's migration scripts are Javascript files that specify how to deploy our contract to a network. Hardhat's deploy plugin is a plugin that extends hardhat's functionality and allows us to easily deploy our contract using truffle's migration scripts.
 
@@ -663,11 +691,11 @@ waiting for tx 0x9f7f8c8a9c4d7f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f...
 ```
 
 
-  # Creating the user interface
+## Creating the user interface
 
 In this page, we will create the user interface for our train ticket booking dapp. We will use React as the frontend library and Tailwind as the styling framework. We will also use celo-sdk as the web3 library for interacting with the celo network and our smart contract.
 
-## Setting up the frontend
+### Setting up the frontend
 
 To set up the frontend, we will do the following steps:
 
@@ -908,20 +936,12 @@ function App() {
   return 
   
   ```
-  
-  
-  
-  
-  
-  
-  
 
-
-# Finishing the user interface
+## Finishing the user interface
 
 In this page, we will finish the user interface for our train ticket booking dapp. We will use Tailwind to style our app and make it responsive and attractive. We will also use React hooks and components to handle user input and display contract data.
 
-## Styling the app
+### Styling the app
 
 To style our app, we will use Tailwind, a utility-first CSS framework that provides a set of predefined classes for styling elements. We will use these classes in our JSX code to apply styles to our app. We will also use some custom CSS for adding some extra features.
 
@@ -1150,11 +1170,5 @@ This will style our app with a gray background, green headings, green buttons, a
 
 That's it! You have successfully created and styled the user interface for your train ticket booking dapp. You can now run your app and test it on the celo testnet. Congratulations! 🎉
 
-
-
-
-  
-  
-  
-    
- 
+## Conclusion
+By following this tutorial, you should have a strong foundation in building decentralized applications on the Celo blockchain. 
