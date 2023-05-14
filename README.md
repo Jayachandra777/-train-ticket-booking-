@@ -1,56 +1,81 @@
-Hello, this is jayachandra. I can help you create a tutorial on dapp development of train ticket booking app in celo blockchain. Here is the first page of the tutorial:
+# Building a Decentralized Application (DApp) for booking Train Tickets on the Celo Blockchain:
 
-# Introduction
+Hello, this is Jayachandra. I can help you to create a tutorial on DApp development of Train Ticket Booking App on the Celo Blockchain. 
 
-In this tutorial, you will learn how to build a decentralized application (dapp) for booking train tickets on the celo blockchain. You will use Solidity to write smart contracts that handle the logic and data of the dapp, and React to create a user interface that interacts with the celo network. You will also use hardhat as a development framework and toolchain for compiling, testing, and deploying your smart contracts.
+## Table of Contents:
 
-## What is a dapp?
+- [Building a Decentralized Application (DApp) for booking Train Tickets on the Celo Blockchain](#building-a Decentralized Application (DApp) for booking Train Tickets on the Celo Blockchain)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Pre-requisites](#prerequisites)
+  - [What is a dapp?](#what-is-a-dapp)
+  - [What is celo?](#what-is-celo)
+     - [What is a train ticket booking dapp?](#what-is-a-train-ticket-booking-dapp)
+  - [Tutorial](#tutorial)
+    - [Setting up the development environment](#setting-up-the-development-environment)
+    - [Writing the Smart Contract](#writing-the-smart-contract)
+      - [The Train Ticket contract](#the-train-ticket-contract)
+    - [Testing the Smart Contract](#testing-the-smart-contract)
+    - [Running and deploying the Smart Contract](#running-and-deploying-the-smart-contract)
+    - [Creating the User Interface](#creating-the-user-interface)
+      - [Setting up the frontend](#setting-up-the-frontend)
+    - [Finishing the user interface](#finishing-the-user-interface)
+      - [Styling the app](#styling-the-app)
+   - [Conclusion](#conclusion)
 
-A dapp is a software application operating on a decentralized network like a blockchain. These applications are designed to be trustless, transparent, and secure, as they do not rely on a central authority for their operation. These apps use distributed ledgers and offer immutability in data storage and management⁴.
+## Introduction:
+
+In this tutorial, you will learn how to build a Decentralized Application (DApp) for booking train tickets on the Celo Blockchain. You will use [Solidity](https://docs.soliditylang.org/en/v0.8.20/) to write Smart Contracts that handles the logic and data of the DApp and [React](https://react-cn.github.io/react/downloads.html) to create a user interface that interacts with the celo network. You will also use [Hardhat](https://hardhat.org/) which is a development framework and toolchain for compiling, testing and deploying your Smart Contracts.
+
+## What is a DApp?
+
+A [DApp](https://www.investopedia.com/terms/d/decentralized-applications-dapps.asp#:~:text=dApps%20run%20on%20a%20blockchain,any%20user%20can%20publish%20messages.) is a software application operating on a decentralized network like a [blockchain](https://aws.amazon.com/what-is/blockchain/?aws-products-all.sort-by=item.additionalFields.productNameLowercase&aws-products-all.sort-order=asc). These applications are designed to be trustless, transparent and secure, as they do not rely on a central authority for their operation. These apps use distributed ledgers and offer immutability in data storage and management.
 
 ## What is celo?
 
-Celo is an open-source blockchain platform focused on making decentralized financial tools accessible to anyone with a mobile phone. It offers a unique opportunity for developers to build and deploy dapps that have the potential to reach a wide audience¹. Celo has two native tokens: CELO, which is used for governance and staking, and cUSD, which is a stablecoin pegged to the US dollar.
+Celo is an open-source blockchain platform focused on making decentralized financial tools accessible to anyone with a mobile phone. It offers a unique opportunities for developers to build and deploy DApps that have the potential to reach a wide audience. Celo has two native tokens: 
+1. **CELO-** which is used for governance and staking and,
+2. **cUSD-** which is a stablecoin pegged to the US dollar.
 
 ## What is a train ticket booking dapp?
 
-A train ticket booking dapp is an application that allows users to buy and sell train tickets on the celo blockchain. The dapp will have the following features:
+A Train Ticket Booking DApp is an application that allows users to buy and sell train tickets on the Celo Blockchain. The dapp will have the following features:
 
-- Users can create an account with their phone number and celo wallet address.
-- Users can browse available train routes and prices.
-- Users can book a ticket by paying with cUSD or CELO tokens.
-- Users can cancel their booking and get a refund (minus a cancellation fee) before the departure time.
-- Users can resell their tickets to other users at a market price.
-- Users can rate their experience and leave feedback for the train service.
+1. Users can create an account with their phone number and celo wallet address.
+2. Users can browse available train routes and prices.
+3. Users can book a ticket by paying with cUSD or CELO tokens.
+4. Users can cancel their booking and get a refund (minus a cancellation fee) before the departure time.
+5. Users can resell their tickets to other users at a market price.
+6. Users can rate their experience and leave feedback for the train service.
 
-## Prerequisites
+## Pre-requisites:
 
 Before diving into building the dapp, you will need to have some level of knowledge of the following:
 
-- Javascript
-- Typescript
-- React
-- Tailwind CSS
-- Hardhat
-- Solidity
+1. [JavaScript](https://www.w3schools.com/js/)
+2. [TypeScript](https://www.w3schools.com/typescript/typescript_intro.php)
+3. [React](https://react-cn.github.io/react/downloads.html)
+4. [Tailwind CSS](https://tailwindcss.com/)
+5. [Hardhat](https://hardhat.org/) 
+6. [Solidity](https://docs.soliditylang.org/en/v0.8.20/)
 
 You will also need a few tools:
 
-- Celo wallet: This is the official wallet for the celo platform, which you will need to test your dapp on the celo testnet.
-- Remix IDE: This is a web-based Integrated Development Environment (IDE) for writing, testing, and debugging smart contracts.
-- Truffle Suite: This is a popular development framework for Ethereum and Celo that provides a suite of tools for building and deploying smart contracts.
+- [Celo wallet](https://chrome.google.com/webstore/detail/celoextensionwallet/kkilomkmpmkbdnfelcpgckmpcaemjcdh): is the official wallet for the celo platform, which you will need to test your DApp on the celo testnet.
+- [Remix IDE](https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null): is a web-based Integrated Development Environment (IDE) for writing, testing and debugging sSmart Contracts.
+- [Truffle Suite](https://trufflesuite.com/docs/truffle/how-to/install/): is a popular development framework for Ethereum and Celo that provides a suite of tools for building and deploying Smart Contracts.
 
-## Setting up the development environment
+## Setting up the development environment:
 
 To set up the development environment, you will need to do the following steps:
 
-1. Install Node.js on your computer. You can download it from here: https://nodejs.org/en/download/
+1. Install [Node.js](https://nodejs.org/en/download/) on your computer.
 2. Install yarn as a package manager. You can install it by running this command in your terminal: `npm install -g yarn`
-3. Install hardhat as a development framework. You can install it by running this command in your terminal: `yarn add --dev hardhat`
-4. Install truffle as a deployment tool. You can install it by running this command in your terminal: `yarn add --dev truffle`
-5. Install react and tailwind as frontend libraries. You can install them by running this command in your terminal: `yarn add react react-dom tailwindcss`
-6. Install celo-sdk as a web3 library for interacting with the celo network. You can install it by running this command in your terminal: `yarn add @celo/contractkit @celo-tools/use-contractkit`
-7. Create a new folder for your project and initialize it with hardhat. You can do this by running these commands in your terminal:
+3. Install [Hardhat](https://hardhat.org/) as a development framework. You can install it by running this command in your terminal: `yarn add --dev hardhat`
+4. Install [Truffle](https://trufflesuite.com/docs/truffle/how-to/install/) as a deployment tool. You can install it by running this command in your terminal: `yarn add --dev truffle`
+5. Install [React](https://react-cn.github.io/react/downloads.html) and Tailwind as frontend libraries. You can install them by running this command in your terminal: `yarn add react react-dom tailwindcss`
+6. Install Celo-SDK as a Web3 library for interacting with the celo network. You can install it by running this command in your terminal: `yarn add @celo/contractkit @celo-tools/use-contractkit`
+7. Create a new folder for your project and initialize it with Hardhat. You can do this by running these commands in your terminal:
 
 ```bash
 mkdir train-ticket-dapp
@@ -58,11 +83,9 @@ cd train-ticket-dapp
 npx hardhat init
 ```
 
-This will create a basic hardhat project structure with some sample files.
+This will create a basic Hardhat project structure with some sample files.
 
 8. Connect your project to the celo testnet (Alfajores). You can do this by editing the `hardhat.config.js` file in your project folder and adding this code:
-
-
 
 ```javascript
 require("@nomiclabs/hardhat-waffle");
@@ -79,7 +102,7 @@ module.exports = {
 };
 ```
 
-This will allow you to deploy your smart contracts to the celo testnet using your private key. You will need to create an environment variable called `ALFAJORES_PRIVATE_KEY` and assign it your celo wallet private key. You can do this by creating a `.env` file in your project folder and adding this line:
+This will allow you to deploy your Smart Contracts to the celo testnet using your private key. You will need to create an environment variable called `ALFAJORES_PRIVATE_KEY` and assign it your celo wallet private key. You can do this by creating a `.env` file in your project folder and adding this line:
 
 ```bash
 ALFAJORES_PRIVATE_KEY=your_private_key
@@ -87,7 +110,7 @@ ALFAJORES_PRIVATE_KEY=your_private_key
 
 Make sure to replace `your_private_key` with your actual private key and keep this file secret.
 
-9. Create a new folder for your frontend and initialize it with create-react-app. You can do this by running these commands in your terminal:
+9. Create a new folder for your frontend and initialize it with create React app. You can do this by running these commands in your terminal:
 
 ```bash
 cd ..
@@ -96,47 +119,42 @@ cd train-ticket-frontend
 npx create-react-app .
 ```
 
-This will create a basic react app structure with some sample files.
+This will create a basic React App structure with some sample files.
 
-10. Configure tailwind for your frontend. You can do this by following the instructions here: https://tailwindcss.com/docs/guides/create-react-app
+10. Configure Tailwind for your frontend. You can do this by following the instructions here: https://tailwindcss.com/docs/guides/create-react-app
 
-That's it! You have successfully set up the development environment for your train ticket booking dapp. 
+That's it! You have successfully set up the development environment for your Train Ticket Booking DApp. 
 
+## Writing the Smart Contracts:
 
+In this page, we will write the Smart Contracts for the Train Ticket Booking DApp. We will use Solidity as the programming language and [Remix IDE](https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.18+commit.87f61d96.js) as the development tool. We will also use Hardhat for testing and deploying our contracts.
 
+## The Train Ticket contract:
 
+The Train Ticket contract is the main contract that handles the logic and data of the dapp. It has the following features:
 
- 
-# Writing the smart contracts
-
-In this page, we will write the smart contracts for the train ticket booking dapp. We will use Solidity as the programming language and Remix IDE as the development tool. We will also use hardhat for testing and deploying our contracts.
-
-## The TrainTicket contract
-
-The TrainTicket contract is the main contract that handles the logic and data of the dapp. It has the following features:
-
-- It defines a struct called `Ticket` that represents a train ticket. It has the following properties:
-  - `id`: a unique identifier for the ticket
-  - `route`: a string that describes the origin and destination of the train
-  - `price`: the original price of the ticket in cUSD
-  - `owner`: the address of the current owner of the ticket
-  - `status`: an enum that indicates whether the ticket is available, booked, or cancelled
-- It defines a mapping called `tickets` that stores all the tickets by their ids
-- It defines a mapping called `balances` that stores the cUSD balances of users
-- It defines a constant called `cancellationFee` that represents the percentage of the ticket price that is deducted as a fee when a user cancels their booking
-- It defines an event called `TicketCreated` that is emitted when a new ticket is created
-- It defines an event called `TicketBooked` that is emitted when a user books a ticket
-- It defines an event called `TicketCancelled` that is emitted when a user cancels their booking
-- It defines an event called `TicketResold` that is emitted when a user resells their ticket to another user
-- It defines a modifier called `onlyOwner` that checks if the sender is the owner of a ticket
-- It defines a modifier called `onlyAvailable` that checks if a ticket is available for booking or reselling
-- It defines a modifier called `onlyBooked` that checks if a ticket is booked by the sender
-- It defines a constructor that takes an address of the cUSD contract as an argument and sets it as a state variable called `cUSD`
-- It defines a function called `createTicket` that takes a string of route and a uint256 of price as arguments and creates a new ticket with those parameters. It assigns the ticket to the sender and emits the `TicketCreated` event.
-- It defines a function called `bookTicket` that takes a uint256 of ticket id as an argument and books the ticket with that id. It transfers cUSD from the sender to the contract and emits the `TicketBooked` event.
-- It defines a function called `cancelBooking` that takes a uint256 of ticket id as an argument and cancels the booking of the ticket with that id. It transfers cUSD from the contract to the sender minus the cancellation fee and emits the `TicketCancelled` event.
-- It defines a function called `resellTicket` that takes a uint256 of ticket id and a uint256 of new price as arguments and resells the ticket with that id at that price. It transfers cUSD from the contract to the sender and emits the `TicketResold` event.
-- It defines a function called `withdrawBalance` that allows users to withdraw their cUSD balance from the contract.
+1. It defines a struct called `Ticket` that represents a train ticket. It has the following properties:
+  - `id`: a unique identifier for the ticket.
+  - `route`: a string that describes the origin and destination of the train.
+  - `price`: the original price of the ticket in cUSD.
+  - `owner`: the address of the current owner of the ticket.
+  - `status`: an enum that indicates whether the ticket is available, booked or cancelled.
+2. It defines a mapping called `tickets` that stores all the tickets by their ids.
+3. It defines a mapping called `balances` that stores the cUSD balances of users.
+4. It defines a constant called `cancellationFee` that represents the percentage of the ticket price that is deducted as a fee when a user cancels their booking.
+5. It defines an event called `TicketCreated` that is emitted when a new ticket is created.
+6. It defines an event called `TicketBooked` that is emitted when a user books a ticket.
+7. It defines an event called `TicketCancelled` that is emitted when a user cancels their booking.
+8. It defines an event called `TicketResold` that is emitted when a user resells their ticket to another user.
+9. It defines a modifier called `onlyOwner` that checks if the sender is the owner of a ticket.
+10. It defines a modifier called `onlyAvailable` that checks if a ticket is available for booking or reselling.
+11. It defines a modifier called `onlyBooked` that checks if a ticket is booked by the sender.
+12. It defines a constructor that takes an address of the cUSD contract as an argument and sets it as a state variable called `cUSD`
+13. It defines a function called `createTicket` that takes a string of route and a uint256 of price as arguments and creates a new ticket with those parameters. It assigns the ticket to the sender and emits the `TicketCreated` event.
+14. It defines a function called `bookTicket` that takes a uint256 of ticket id as an argument and books the ticket with that id. It transfers cUSD from the sender to the contract and emits the `TicketBooked` event.
+15. It defines a function called `cancelBooking` that takes a uint256 of ticket id as an argument and cancels the booking of the ticket with that id. It transfers cUSD from the contract to the sender minus the cancellation fee and emits the `TicketCancelled` event.
+16. It defines a function called `resellTicket` that takes a uint256 of ticket id and a uint256 of new price as arguments and resells the ticket with that id at that price. It transfers cUSD from the contract to the sender and emits the `TicketResold` event.
+17. It defines a function called `withdrawBalance` that allows users to withdraw their cUSD balance from the contract.
 
 Here is how you can write this contract in Solidity:
 
@@ -181,8 +199,7 @@ contract TrainTicket {
     // Define TicketCancelled event
     event TicketCancelled(uint256 indexed id, address owner);
 
-  
-// Define TicketResold event
+    // Define TicketResold event
     event TicketResold(uint256 indexed id, address seller, address buyer, uint256 newPrice);
 
     // Define onlyOwner modifier
@@ -212,6 +229,9 @@ contract TrainTicket {
     function createTicket(string memory _route, uint256 _price) public {
         // Generate a unique id for the ticket
         uint256 id = uint256(keccak256(abi.encodePacked(_route, _price, block.timestamp)));
+
+        // Make sure the ID is not already in use
+        require(tickets[id].id != id, "Ticket ID already in use");
 
         // Create a new ticket with the given parameters
         Ticket memory newTicket = Ticket(id, _route, _price, msg.sender, Status.Available);
@@ -291,18 +311,17 @@ contract TrainTicket {
 }
 ```
 
-That's it! You have successfully written the TrainTicket contract for your dapp. In the next step we will test and deploy this contract using hardhat. Stay tuned! 😊
+That's it! You have successfully written the Train Ticket contract for your DApp. In the next step we will test and deploy this contract using Hardhat. Stay tuned! 😊
 
+## Testing and deploying the smart contracts:
 
-# Testing and deploying the smart contracts
+In this page, we will test and deploy the Train Ticket contract using Hardhat. We will use Hardhat's built-in testing framework and network to write and run unit tests for our contract. We will also use truffle's migration scripts to deploy our contract to the celo testnet.
 
-In this page, we will test and deploy the TrainTicket contract using hardhat. We will use hardhat's built-in testing framework and network to write and run unit tests for our contract. We will also use truffle's migration scripts to deploy our contract to the celo testnet.
+## Writing unit tests:
 
-## Writing unit tests
+Unit tests are a way of verifying that our contract works as expected and does not have any bugs or errors. They are written in JavaScript and use a library called chai to make assertions about the contract state and events.
 
-Unit tests are a way of verifying that our contract works as expected and does not have any bugs or errors. They are written in Javascript and use a library called chai to make assertions about the contract state and events.
-
-To write unit tests for our TrainTicket contract, we will use hardhat's testing framework, which is based on mocha and waffle. Mocha is a testing framework that provides a structure for writing and running tests. Waffle is a library that provides tools for interacting with smart contracts and making assertions.
+To write unit tests for our Train Ticket contract, we will use Hardhat's testing framework which is based on Mocha and Waffle. Mocha is a testing framework that provides a structure for writing and running tests. Waffle is a library that provides tools for interacting with Smart Contracts and making assertions.
 
 To write unit tests, we will create a new file in the `test` folder of our hardhat project and name it `TrainTicket.test.js`. In this file, we will write the following code:
 
@@ -387,6 +406,59 @@ describe("TrainTicket", function () {
     expect(ticket.owner).to.equal(owner.address);
     expect(ticket.status).to.equal(0); // Available
 
+    // Expect that a TicketCreated event is emitted with the correct values
+    await expect(trainTicket.createTicket(ROUTE, PRICE))
+      .to.emit(trainTicket, "TicketCreated")
+      .withArgs(0, ROUTE, PRICE, owner.address);
+  });
+
+  // Test the bookTicket function
+  it("should book a ticket with the given id", async function () {
+    // Call the createTicket function with ROUTE and PRICE as arguments
+    await trainTicket.createTicket(ROUTE, PRICE);
+
+    // Call the bookTicket function with id (0) as argument
+    await bookTicket(0);
+
+    // Get the ticket from the tickets mapping by its id (0)
+    let ticket = await trainTicket.tickets(0);
+
+    // Expect that the ticket owner and status are updated
+    expect(ticket.owner).to.equal(buyer.address);
+    expect(ticket.status).to.equal(1); // Booked
+
+    // Expect that the cUSD balance of the buyer is decreased by the ticket price
+    expect(await getBalance(buyer.address)).to.equal(ethers.utils.parseEther("990"));
+
+    // Expect that the cUSD balance of the contract is increased by the ticket price
+    expect(await getBalance(trainTicket.address)).to.equal(PRICE);
+
+    // Expect that a TicketBooked event is emitted with the correct values
+    await expect(bookTicket(0))
+      .to.emit(trainTicket, "TicketBooked")
+      .withArgs(0, buyer.address);
+  });
+
+  // Test the cancelBooking function
+  it("should cancel the booking of a ticket with the given id", async function () {
+    // Call the createTicket function with ROUTE and PRICE as arguments
+    await trainTicket.createTicket(ROUTE, PRICE);
+
+    // Call the bookTicket function with id (0) as argument
+    await bookTicket(0);
+
+    // Call the cancelBooking function with id (0) as argument
+    await cancelBooking(0);
+
+    // Get the ticket from the tickets mapping by its id (0)
+    let ticket = await trainTicket.tickets(0);
+
+    // Expect that the ticket owner and status are updated
+    expect(ticket.owner).to.equal(address(0));
+    expect(ticket.status).to.equal(2); // Cancelled
+
+    // Calculate the refund amount (minus the cancellation fee)
+    let refund = (PRICE * (100 - CANCELLATION_FEE)) / 100;
 
     // Expect that a TicketCreated event is emitted with the correct values
     await expect(trainTicket.createTicket(ROUTE, PRICE))
@@ -442,62 +514,6 @@ describe("TrainTicket", function () {
     // Calculate the refund amount (minus the cancellation fee)
     let refund = (PRICE * (100 - CANCELLATION_FEE)) / 100;
 
-
-    // Expect that a TicketCreated event is emitted with the correct values
-    await expect(trainTicket.createTicket(ROUTE, PRICE))
-      .to.emit(trainTicket, "TicketCreated")
-      .withArgs(0, ROUTE, PRICE, owner.address);
-  });
-
-  // Test the bookTicket function
-  it("should book a ticket with the given id", async function () {
-    // Call the createTicket function with ROUTE and PRICE as arguments
-    await trainTicket.createTicket(ROUTE, PRICE);
-
-    // Call the bookTicket function with id (0) as argument
-    await bookTicket(0);
-
-    // Get the ticket from the tickets mapping by its id (0)
-    let ticket = await trainTicket.tickets(0);
-
-    // Expect that the ticket owner and status are updated
-    expect(ticket.owner).to.equal(buyer.address);
-    expect(ticket.status).to.equal(1); // Booked
-
-    // Expect that the cUSD balance of the buyer is decreased by the ticket price
-    expect(await getBalance(buyer.address)).to.equal(ethers.utils.parseEther("990"));
-
-    // Expect that the cUSD balance of the contract is increased by the ticket price
-    expect(await getBalance(trainTicket.address)).to.equal(PRICE);
-
-    // Expect that a TicketBooked event is emitted with the correct values
-    await expect(bookTicket(0))
-      .to.emit(trainTicket, "TicketBooked")
-      .withArgs(0, buyer.address);
-  });
-
-  // Test the cancelBooking function
-  it("should cancel the booking of a ticket with the given id", async function () {
-    // Call the createTicket function with ROUTE and PRICE as arguments
-    await trainTicket.createTicket(ROUTE, PRICE);
-
-    // Call the bookTicket function with id (0) as argument
-    await bookTicket(0);
-
-    // Call the cancelBooking function with id (0) as argument
-    await cancelBooking(0);
-
-    // Get the ticket from the tickets mapping by its id (0)
-    let ticket = await trainTicket.tickets(0);
-
-    // Expect that the ticket owner and status are updated
-    expect(ticket.owner).to.equal(address(0));
-    expect(ticket.status).to.equal(2); // Cancelled
-
-    // Calculate the refund amount (minus the cancellation fee)
-    let refund = (PRICE * (100 - CANCELLATION_FEE)) / 100;
-
-   
     // Expect that the cUSD balance of the buyer is increased by the refund amount
     expect(await getBalance(buyer.address)).to.equal(ethers.utils.parseEther("999"));
 
@@ -544,8 +560,7 @@ describe("TrainTicket", function () {
   it("should withdraw the cUSD balance of the sender", async function () {
     // Call the createTicket function with ROUTE and PRICE as arguments
     await trainTicket.createTicket(ROUTE, PRICE);
-
-   
+    
     // Call the bookTicket function with id (0) as argument
     await bookTicket(0);
 
@@ -570,16 +585,15 @@ describe("TrainTicket", function () {
 });
 ```
 
-That's it! You have successfully written unit tests for your TrainTicket contract. In the next step, we will run these tests and deploy our contract to the celo testnet. Stay tuned! 😊
+That's it! You have successfully written unit tests for your Train Ticket contract. In the next step, we will run these tests and deploy our contract to the celo testnet. Stay tuned! 😊
 
+## Running and deploying the smart contracts:
 
-# Running and deploying the smart contracts
+In this page, we will run and deploy our Train Ticket contract using hardhat. We will use Gardhat's built-in network and node to run our tests locally. We will also use Truffle's migration scripts and Hardhat's deploy plugin to deploy our contract to the celo testnet.
 
-In this page, we will run and deploy our TrainTicket contract using hardhat. We will use hardhat's built-in network and node to run our tests locally. We will also use truffle's migration scripts and hardhat's deploy plugin to deploy our contract to the celo testnet.
+## Running the tests:
 
-## Running the tests
-
-To run our tests, we will use hardhat's `test` command, which will automatically compile our contract and run our test file using mocha and waffle. To run our tests, we will open a new terminal window in our hardhat project folder and type this command:
+To run our tests, we will use Hardhat's `test` command, which will automatically compile our contract and run our test file using Mocha and Waffle. To run our tests, we will open a new terminal window in our Fardhat project folder and type this command:
 
 ```bash
 npx hardhat test
@@ -600,11 +614,11 @@ This will output something like this:
   6 passing (1s)
 ```
 
-This means that all our tests have passed and our contract works as expected. If any of our tests fail, we can debug them using hardhat's console.log function or Remix IDE's debugger.
+This means that all our tests have passed and our contract works as expected. If any of our tests fail, we can debug them using Hardhat's "console.log" function or Remix IDE's debugger.
 
 ## Deploying the contract
 
-To deploy our contract to the celo testnet, we will use truffle's migration scripts and hardhat's deploy plugin. Truffle's migration scripts are Javascript files that specify how to deploy our contract to a network. Hardhat's deploy plugin is a plugin that extends hardhat's functionality and allows us to easily deploy our contract using truffle's migration scripts.
+To deploy our contract to the celo testnet, we will use truffle's migration scripts and hardhat's deploy plugin. Truffle's migration scripts are JavaScript files that specify how to deploy our contract to a network. Hardhat's deploy plugin is a plugin that extends Hardhat's functionality and allows us to easily deploy our contract using Truffle's migration scripts.
 
 To deploy our contract, we will do the following steps:
 
@@ -662,12 +676,11 @@ waiting for tx 0x9f7f8c8a9c4d7f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f...
 "TrainTicket" deployed at 0x123456789012345678901234567890123
 ```
 
+## Creating the User Interface:
 
-  # Creating the user interface
+In this page, we will create the user interface for our Train Ticket Booking DApp. We will use React as the frontend library and Tailwind as the styling framework. We will also use celo-sdk as the web3 library for interacting with the celo network and our Smart Contract.
 
-In this page, we will create the user interface for our train ticket booking dapp. We will use React as the frontend library and Tailwind as the styling framework. We will also use celo-sdk as the web3 library for interacting with the celo network and our smart contract.
-
-## Setting up the frontend
+## Setting up the frontend:
 
 To set up the frontend, we will do the following steps:
 
@@ -750,7 +763,6 @@ function App() {
     return new Date(timestamp * 1000).toLocaleString();
   }
 
-
   // Define helper functions for connecting to user's wallet and updating network
   function connectWallet() {
     performActions((kit) => {
@@ -811,7 +823,6 @@ function App() {
     // Clear user input
     setId("");
 
-   
     // Fetch the updated tickets list
     fetchTickets();
   }
@@ -861,7 +872,6 @@ function App() {
       return;
     }
 
-  
     // Call the resellTicket function from the trainTicket contract
     await trainTicket.methods.resellTicket(id, newPriceInWei).send({ from: address });
 
@@ -909,19 +919,11 @@ function App() {
   
   ```
   
-  
-  
-  
-  
-  
-  
-
-
-# Finishing the user interface
+## Finishing the user interface:
 
 In this page, we will finish the user interface for our train ticket booking dapp. We will use Tailwind to style our app and make it responsive and attractive. We will also use React hooks and components to handle user input and display contract data.
 
-## Styling the app
+## Styling the app:
 
 To style our app, we will use Tailwind, a utility-first CSS framework that provides a set of predefined classes for styling elements. We will use these classes in our JSX code to apply styles to our app. We will also use some custom CSS for adding some extra features.
 
@@ -932,49 +934,49 @@ To style our app, we will do the following steps:
 ```css
 /* Define custom CSS variables */
 :root {
-  --celo-blue: #35d07f;
-  --celo-green: #fbcc5c;
+--color-celo-blue: #35d07f; // define variable for Celo blue color
+--color-celo-green: #fbcc5c; // define variable for Celo green color
 }
 
 /* Define custom CSS classes */
-.btn {
-  @apply px-4 py-2 rounded-lg font-bold text-white;
+.ticket-button { // define button style class
+@apply px-4 py-2 rounded-lg font-bold text-white; // apply styling for padding, font, and text color
 }
 
-.btn-blue {
-  @apply bg-celo-blue hover:bg-celo-green;
+.button-blue { // define button style class for blue button
+@apply ticket-button bg-color-celo-blue hover:bg-color-celo-green; // apply styling for background color and hover effect
 }
 
-.btn-green {
-  @apply bg-celo-green hover:bg-celo-blue;
+.button-green { // define button style class for green button
+@apply ticket-button bg-color-celo-green hover:bg-color-celo-blue; // apply styling for background color and hover effect
 }
 
-.input {
-  @apply px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-celo-blue;
+.user-input { // define input style class
+@apply px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-color-celo-blue; // apply styling for padding, border, and focus state
 }
 
-.table {
-  @apply w-full table-auto;
+.table { // define table style class
+@apply w-full table-auto; // apply styling for full width and automatic table layout
 }
 
-.th {
-  @apply px-4 py-2 text-left font-bold border-b-2 border-gray-200;
+.table-header { // define table header style class
+@apply px-4 py-2 text-left font-bold border-b-2 border-gray-200; // apply styling for padding, font, and bottom border
 }
 
-.td {
-  @apply px-4 py-2 border-b border-gray-200;
+.table-data { // define table data style class
+@apply px-4 py-2 border-b border-gray-200; // apply styling for padding and bottom border
 }
 
 /* Define media queries for responsiveness */
-@media (max-width: 768px) {
-  .table {
-    @apply table-fixed;
-  }
+@media (max-width: 768px) { // define media query for screen sizes up to 768px
+.table { // apply table style for smaller screens
+@apply table-fixed;
+}
 
-  .th,
-  .td {
-    @apply w-1/4;
-  }
+.table-header,
+.table-data { // apply table header and data style for smaller screens
+@apply w-1/4;
+}
 }
 ```
 
@@ -997,20 +999,21 @@ This will apply the custom CSS to our app.
     <button
       className="btn btn-blue"
       onClick={connectWallet}
-      disabled={address ? true : false}
+      disabled={address ? true : false} // disable button if address is already connected
     >
-      {address ? "Connected" : "Connect Wallet"}
+      {address ? "Connected" : "Connect Wallet"} // show "Connected" or "Connect Wallet" depending on address connection status
     </button>
     <select
       className="input"
-      value={network}
-      onChange={(e) => updateNetwork(e.target.value)}
+      value={network} // set default value to current network
+      onChange={(e) => updateNetwork(e.target.value)} // update network state when a new option is selected
     >
-      <option value="alfajores">Alfajores Testnet</option>
-      <option value="mainnet">Mainnet</option>
+      <option value="alfajores">Alfajores Testnet</option> // network option 1
+      <option value="mainnet">Mainnet</option> // network option 2
     </select>
   </div>
 </header>
+
 ```
 
 This will style our header with a white background, a blue title, a blue button, and a gray input.
@@ -1146,15 +1149,10 @@ return (
   );
 ```
 
-This will style our app with a gray background, green headings, green buttons, and a gray table.
+This will style our app with a gray background, green headings, green buttons and a gray table.
 
 That's it! You have successfully created and styled the user interface for your train ticket booking dapp. You can now run your app and test it on the celo testnet. Congratulations! 🎉
 
+## Conclusion:
 
-
-
-  
-  
-  
-    
- 
+Therefore, building a Decentralized Application (DApp) for booking train tickets on the Celo blockchain would offer numerous benefits, including increased security, transparency and efficiency. Using blockchain technology, the application could enable users to securely book train tickets without the need for intermediaries, reducing costs and streamlining the booking process. Additionally, the use of Celo's blockchain platform could enable greater financial inclusion, as it is designed to provide access to financial services to individuals who are currently unbanked or underbanked. Overall, developing a DApp for booking train tickets on the Celo blockchain could revolutionize the way we think about transportation and financial transactions, offering a decentralized, secure and efficient alternative to traditional booking systems. 
